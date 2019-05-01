@@ -10,8 +10,8 @@ class Connexion {
         if (!self::$_instance) {
             try {
                 self::$_instance = new PDO($dsn, $user, $pass);
-                //spÃ©cifie la maniÃ¨re dont PDO rapportera les erreurs : on demande ici une exception 
-                //(plutÃ´t qu'un warning PDO::ERRMODE_WARNING)
+                //spécifie la manière dont PDO rapportera les erreurs : on demande ici une exception 
+                //(plutôt qu'un warning PDO::ERRMODE_WARNING)
                 self::$_instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 //print "Connect&eacute; gt_bt_jq_mysql";
                 
