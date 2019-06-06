@@ -2,24 +2,25 @@
 
 
 class AdminDB extends admin{
-     private $_attributs = array();
+     private $_db;
+    private $_array = array();
   
-  public function __construct(array $data) {
-      $this->hydrate($data);
-  }     
+  public function __construct($db){
+        $this->_db = $db;
+    }   
   //hydrate
   public function hydrate(array $data) {
      foreach ($data as $key => $value) {
     	$this->$key = $value;       
-    //on affecte ï¿½ la clï¿½ sa valeur; le tableau $data est le resultset, tableau associatif
      }
   }
-  public function getAdmin($login,$password){
+  public function getAdmin($nom,$adressemail){
         try{
-            $query = "select * from admin where login=:login and password=:password";
+            
+            $query="select * from pro_client where nom=:nom and adressemail=:adressemail";
             $resultset = $this->_db->prepare($query);
-            $resultset->bindValue(':login',$login);
-            $resultset->bindValue(':password',$password);
+            $resultset->bindValue(':nom',$nom);
+            $resultset->bindValue(':adressemail',$adressemail);
             
             $resultset->execute();
 

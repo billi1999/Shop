@@ -19,7 +19,7 @@ class pro_cinemaDB {
         $this->_db = $db;
     }
     
-    public function getPro_cinemaDB(){
+    public function getPro_cinema(){
         try{
             $query = "select * from pro_cinema";
             $resultset = $this->_db->prepare($query);

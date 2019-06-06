@@ -1,0 +1,30 @@
+.container-fluid{
+    padding-left: 0px;
+    padding-right:0px;
+    padding-top: 1%;
+}
+.form-control{
+    padding-left: 5%;
+}
+
+header{
+    background-color: #b2ebf9;
+    color:#8c54a1;
+   margin-bottom: -1%;
+}
+
+footer{
+    
+     position: fixed;
+     
+  bottom: -2%;
+}
+body{
+    color:#ffffff;
+   background-color: #8c54a1;
+   
+}
+/*margin: 0%;*/
+table{
+    background-color: #fa9076;
+}
